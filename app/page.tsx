@@ -344,7 +344,9 @@ export default function HomePage() {
 
             <div className="text-center md:text-left">
               <p className="text-blue-600 font-medium mb-2">Welcome to my portfolio</p>
-              <h1 className="text-4xl md:text-5xl font-bold text-gray-900 mb-4">Hi, I'm Rangi Ho</h1>
+              <h1 className="text-4xl md:text-5xl font-bold text-gray-900 mb-4">
+  Hi, I&apos;m Rangi Ho
+</h1>
               <p className="text-lg text-gray-600 leading-relaxed max-w-xl">
                 Final-year Economics student at the National University of Singapore, 
                 with a second major in Data Analytics and a minor in Mathematics.
