@@ -329,13 +329,13 @@ export default function HomePage() {
               <div className="absolute -inset-8 rounded-full border border-gray-100" />
               <div className="w-48 h-48 md:w-56 md:h-56 rounded-full overflow-hidden shadow-2xl ring-4 ring-white transform transition duration-500 hover:scale-105">
               <img
-  src="/logos/headshot.jpeg"
+  src="/logos/headshot_v2.jpeg"
   alt="Rangi Ho"
   className="w-full h-full object-cover"
   style={{
     transform: 'scale(1.15)',      // zoom in
     transformOrigin: 'center',     // keep centered
-    objectPosition: '80% 05%',     // fine-tune vertical focus if needed
+    objectPosition: '50% 20%',     // fine-tune vertical focus if needed
   }}
 />
 
@@ -470,7 +470,7 @@ export default function HomePage() {
         </div>
       </section>
 
-      {/* Projects Section */}
+     {/* Projects Section */}
 <section
   id="projects"
   className="py-16 px-4 bg-gradient-to-b from-gray-50/50 to-white scroll-mt-20"
@@ -480,8 +480,9 @@ export default function HomePage() {
 
     <div className="mt-10 space-y-10">
       {/* Tech */}
-      <ProjectGroup title="Tech" />
       <div className="space-y-4">
+        <ProjectGroup title="Tech" />
+
         <ProjectCard
           title="Monde"
           link={{ label: "mondelearning.com", href: "https://www.mondelearning.com/" }}
@@ -493,8 +494,14 @@ export default function HomePage() {
           title="Enhancing Mathematical Problem-Solving in Discrete Mathematics Through Fine-Tuning Large Language Models"
           description="Implemented Low-Rank Adaptation (LoRA) via PEFT to fine-tune LLaMA 2 on custom discrete mathematics datasets, enhancing the model's ability to perform domain-specific reasoning."
           links={[
-            { label: "GitHub", href: "https://github.com/rangiho/Enhancing-Mathematical-Problem-Solving-in-Discrete-Mathematics-through-Fine-Tuning-LLMs" },
-            { label: "Documentation", href: "https://drive.google.com/file/d/1qw4At2J6nd9Ex4HgDZ1JX6zgo1RLkTY-/view" }
+            {
+              label: "GitHub",
+              href: "https://github.com/rangiho/Enhancing-Mathematical-Problem-Solving-in-Discrete-Mathematics-through-Fine-Tuning-LLMs",
+            },
+            {
+              label: "Documentation",
+              href: "https://drive.google.com/file/d/1qw4At2J6nd9Ex4HgDZ1JX6zgo1RLkTY-/view",
+            },
           ]}
           techLogos={["/logos/python.png"]}
         />
@@ -519,52 +526,108 @@ export default function HomePage() {
           }
           links={[
             { label: "GitHub", href: "https://github.com/rangiho/hawkerbro" },
-            { label: "Documentation", href: "https://drive.google.com/drive/folders/19B285Uw81VAKAFscF8WiK5vQlNogvgv3?usp=drive_link" }
+            {
+              label: "Documentation",
+              href: "https://drive.google.com/drive/folders/19B285Uw81VAKAFscF8WiK5vQlNogvgv3?usp=drive_link",
+            },
           ]}
           techLogos={["/logos/flutter.png", "/logos/firebase.webp"]}
         />
       </div>
 
-      {/* Finance */}
-      <ProjectGroup title="Finance" />
+      {/* Economic/Econometrics Research */}
       <div className="space-y-4">
-      <ProjectCard
-          title="Long Floor & Decor (NYSE:FND)"
-          description={
-            <>
-              Full 3 Statement Model, DCF, Scenario Analysis and Valuations with Report
-            </>
-          }
+        <ProjectGroup title="Economic/Econometrics Research" />
+
+        <ProjectCard
+          title="Undergraduate Research Opportunity (UROP): Empirical Applications of Multiway Clustering"
+          description={<>I studied and applied multiway clustering methods in empirical economics to address a core problem in applied regression analysis: how to conduct valid statistical inference when error terms are correlated along more than one dimension.
+
+            Standard regression models often assume independent errors, or at most allow clustering along a single dimension (for example, by country or by firm). However, many real-world datasets violate this assumption. My project focused on understanding why single-way clustering is insufficient, how multiway clustering corrects this, and how these methods change empirical conclusions in applied work. The main takeaway is that inference is highly sensitive to the assumed error structure. This reinforced the idea that econometric credibility depends as much on variance estimation as on model specification.</>}
+            techLogos={["/logos/R.png"]}
+        />
+
+        <ProjectCard
+          title="Machine Learning Analysis of Student Performance"
+          description="Supervised regression models, supervised classification models, and unsupervised learning techniques (PCA and K-Means) to examine how class size, demographics, and teacher characteristics relate to academic outcomes."
           links={[
-            { label: "Financial Model", href: "https://docs.google.com/spreadsheets/d/17r4qdhlgWHMbgZe9dmF_z7iq0lvVslCF/edit?usp=sharing&ouid=105166441848938439398&rtpof=true&sd=true" },
-            { label: "Report", href: "https://drive.google.com/file/d/1LR0285pXYlzrxMDYSP6_tNK9jcd2Ub-d/view?usp=sharing" }
+            {
+              label: "GitHub",
+              href: "https://github.com/rangiho/ML-Analysis-of-Student-Performance-NELS-88-",
+            },
+          ]}
+          techLogos={["/logos/python.png"]}
+        />
+
+        <ProjectCard
+          title="Malaria in Sub-Saharan Africa"
+          description="Empirical analysis of malaria’s long-run economic and educational impacts in Sub-Saharan Africa."
+          links={[{ label: "GitHub", href: "https://github.com/rangiho/Malaria-in-Sub-Saharan-Africa" }]}
+          techLogos={["/logos/R.png"]}
+        />
+
+        <ProjectCard
+          title="Bitcoin Returns and Lunar Phases"
+          description="Investigates whether Bitcoin’s daily returns and volatility exhibit any statistical relationship with the lunar cycle."
+          links={[
+            {
+              label: "GitHub",
+              href: "https://github.com/rangiho/Bitcoin-Returns-and-Lunar-Phases",
+            },
+          ]}
+          techLogos={["/logos/R.png"]}
+        />
+      </div>
+
+      {/* Finance */}
+      <div className="space-y-4">
+        <ProjectGroup title="Finance" />
+
+        <ProjectCard
+          title="Long Floor & Decor (NYSE:FND)"
+          description={<>Full 3 Statement Model, DCF, Scenario Analysis and Valuations with Report</>}
+          links={[
+            {
+              label: "Financial Model",
+              href: "https://docs.google.com/spreadsheets/d/17r4qdhlgWHMbgZe9dmF_z7iq0lvVslCF/edit?usp=sharing&ouid=105166441848938439398&rtpof=true&sd=true",
+            },
+            {
+              label: "Report",
+              href: "https://drive.google.com/file/d/1LR0285pXYlzrxMDYSP6_tNK9jcd2Ub-d/view?usp=sharing",
+            },
           ]}
         />
       </div>
 
       {/* Essays */}
-      <ProjectGroup title="Essays" />
       <div className="space-y-4">
+        <ProjectGroup title="Essays" />
+
         <ProjectCard
           title="Basis of Authority: Challenges on the Social Contract through Feminist and Familial Lenses"
-          subtitle="Political Philosophy Essay"
+          subtitle="Political Philosophy"
           description={
             <>
-              The crux of this fictional dialogue is not to proffer a definitive answer to the enduring question of
-              &quot;What is the basis of authority?&quot; but rather to explore a plausible response, using the social
+              The crux of this fictional dialogue is not to proffer a definitive answer to the enduring question
+              of &quot;What is the basis of authority?&quot; but rather to explore a plausible response, using the social
               contract theories, to illuminate the necessity for governance and political authority.
             </>
           }
           links={[
-            { label: "Essay", href: "https://drive.google.com/file/d/1GfDm3ssqwv1gW_oS_34hU4bhNdtmGDk1/view?usp=sharing" },
-            { label: "Nomination for Best Essay Prize", href: "https://tembusu.nus.edu.sg/education/student-prizes/" }
+            {
+              label: "Essay",
+              href: "https://drive.google.com/file/d/1GfDm3ssqwv1gW_oS_34hU4bhNdtmGDk1/view?usp=sharing",
+            },
+            {
+              label: "Nomination for Best Essay Prize",
+              href: "https://tembusu.nus.edu.sg/education/student-prizes/",
+            },
           ]}
         />
       </div>
     </div>
   </div>
 </section>
-
 
       {/* Activities Section */}
       <section id="activities" className="py-16 px-4 scroll-mt-20">
